@@ -6,3 +6,7 @@ CTCaer (Hekate): https://github.com/CTCaer
 SciresM (Atmosphere): https://github.com/SciresM
 
 rashevskyv (DBI): https://github.com/rashevskyv/dbi
+
+
+
+Compatibilidad HOS 22.1.0

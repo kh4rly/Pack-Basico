@@ -9,4 +9,4 @@ rashevskyv (DBI): https://github.com/rashevskyv/dbi
 
 
 
-Compatibilidad HOS 23.0.0
+Compatibilidad HOS 23.0.1

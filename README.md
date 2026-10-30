@@ -124,75 +124,12 @@ de Telegram y mantiene tu consola limpia, todo sincronizado con un bot de Telegr
   con doble confirmacion (borra tambien el mensaje de Telegram).
 
 ### Nube de guardados
-- Canal privado con un tema por usuario; los anonimos usan su nick provisional.
 - Versionado por fecha: nada se sobrescribe, siempre se puede elegir version.
 - Archivos grandes troceados y recompuestos automaticamente.
 - Al iniciar sesion, los guardados anonimos se trasladan fisicamente al tema del
   usuario y se elimina el tema anonimo.
 
 ---
-
-## Instalacion del bot
-
-Archivo: `bot_puente.py`. Requisitos: `pip install -r requirements.txt`.
-
-Variables de entorno (`.env`):
-
-```ini
-# Telegram
-TG_TOKEN=TOKEN_DEL_BOT
-ADMIN_IDS=TU_ID_NUMERICO_DE_TELEGRAM
-
-# Base de datos
-DB_PATH=/ruta/al/bot/spu_bot.db
-
-# Paquetes servidos por HTTP (archivo zip o carpeta con zips)
-CFW_ZIP_PATH=/ruta/al/pack-basico
-FIRMWARE_ZIP_PATH=/ruta/al/firmware
-VIP_ZIP_PATH=/ruta/al/pack-vip
-DESACTIVAR_NEXTENDO_ZIP_PATH=/ruta/al/desactivarnextendo
-
-# Guardados en la nube de Telegram
-SAVES_DIR=/ruta/temporal/saves_tmp
-SAVES_CHANNEL_ID=ID_DEL_CANAL_PRIVADO
-
-# Repositorio 100% (comunidad)
-SAVES100_CHANNEL_ID=ID_DEL_CANAL_100
-SAVES100_TOPIC_ID=ID_DEL_TOPIC_100
-
-# Opcionales
-TG_CHANNEL=@TuCanal
-TG_CHANNEL_LINK=https://t.me/TuCanal
-```
-
-Arranque:
-
-```bash
-cd /ruta/al/bot
-uvicorn bot_puente:app --host 0.0.0.0 --port 8000
-```
-
----
-
-## Compilacion de la app (Switch)
-
-Requisitos: [devkitPro](https://devkitpro.org/) con `switch-dev` y las portlibs
-`curl`, `mbedtls`, `minizip` y `z`.
-
-```bash
-cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE="$DEVKITPRO/cmake/Switch.cmake"
-cmake --build build -j4
-```
-
-Salida: `build/SPUpdater.nro` 鈫?copiar a `sdmc:/switch/SPUpdater.nro`.
-
-La URL del bot va en `data/backend.txt` (se embebe en el NRO):
-
-```
-http://IP_DE_TU_RASPBERRY:8000
-```
-
-Tambien admite un JSON opcional con rutas personalizadas y repositorios.
 
 ---
 

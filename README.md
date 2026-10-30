@@ -21,7 +21,6 @@ de Telegram y mantiene tu consola limpia, todo sincronizado con un bot de Telegr
 - **Version:** 1.6.x (autoincremental en cada compilacion)
 - **Autor:** N3DSwitch
 - **Plataforma:** Nintendo Switch (Atmosphere + hbmenu)
-- **Servidor:** Python (FastAPI + python-telegram-bot), pensado para una Raspberry Pi
 
 ---
 
